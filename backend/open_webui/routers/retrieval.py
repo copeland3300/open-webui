@@ -211,7 +211,7 @@ async def get_embedding_config(request: Request, user=Depends(get_admin_user)):
 
 
 @router.get("/reranking")
-async def get_reraanking_config(request: Request, user=Depends(get_admin_user)):
+async def get_reranking_config(request: Request, user=Depends(get_admin_user)):
     return {
         "status": True,
         "reranking_model": request.app.state.config.RAG_RERANKING_MODEL,

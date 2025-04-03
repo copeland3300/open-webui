@@ -1373,7 +1373,7 @@ async def generate_openai_chat_completion(
 
 @router.get("/v1/models")
 @router.get("/v1/models/{url_idx}")
-async def get_openai_models(
+async def get_ollama_models(
     request: Request,
     url_idx: Optional[int] = None,
     user=Depends(get_verified_user),
